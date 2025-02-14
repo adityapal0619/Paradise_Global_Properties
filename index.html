@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paradise Global Properties</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-900">
+    
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md py-4">
+        <div class="container mx-auto flex justify-between items-center px-4 md:px-6">
+            <a href="#" class="text-xl md:text-2xl font-bold text-gray-800">Paradise Global Properties</a>
+            <button id="menu-btn" class="md:hidden">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+            <ul class="hidden md:flex space-x-6">
+                <li><a href="#about" class="hover:text-gray-600">About</a></li>
+                <li><a href="#properties" class="hover:text-gray-600">Properties</a></li>
+                <li><a href="#contact" class="hover:text-gray-600">Contact</a></li>
+            </ul>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden absolute w-full bg-white shadow-lg">
+            <ul class="text-center py-4">
+                <li><a href="#about" class="block py-2 hover:bg-gray-100">About</a></li>
+                <li><a href="#properties" class="block py-2 hover:bg-gray-100">Properties</a></li>
+                <li><a href="#contact" class="block py-2 hover:bg-gray-100">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative w-full h-[50vh] md:h-screen">
+        <video autoplay muted loop class="absolute top-0 left-0 w-full h-full object-cover z-0">
+            <source src="photos/image-5.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-white text-center z-10 px-4">
+            <h1 class="text-3xl md:text-5xl font-extrabold mb-4">Find Your Dream Luxury Home</h1>
+            <p class="text-sm md:text-lg mb-6">Discover the finest real estate properties with unmatched elegance and style.</p>
+            <a href="#properties" class="text-sm md:text-lg bg-white text-gray-900 px-4 py-2 md:px-6 md:py-3 rounded-lg font-semibold hover:bg-gray-300">
+                Browse Listings
+            </a>
+        </div>
+    </section>
+
+    <!-- Properties Section -->
+    <section id="properties" class="py-12 md:py-16 bg-white">
+        <div class="container mx-auto px-4 md:px-6">
+            <h2 class="text-2xl md:text-4xl font-bold text-center mb-8 md:mb-12">Featured Properties</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                <!-- Property 1 -->
+                <div class="rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <img src="photos/image.jpg" alt="Beach Villa" class="w-full h-48 md:h-64 object-cover">
+                    <div class="p-4 md:p-6">
+                        <h3 class="text-lg md:text-xl font-semibold mb-2">Modern Beach Villa</h3>
+                        <p class="text-gray-600 font-bold text-md md:text-lg">$5,200,000</p>
+                        <div class="mt-3 flex flex-wrap gap-2">
+                            <span class="bg-gray-200 px-3 py-1 rounded-full text-xs md:text-sm">6 Bedrooms</span>
+                            <span class="bg-gray-200 px-3 py-1 rounded-full text-xs md:text-sm">8 Bathrooms</span>
+                            <span class="bg-gray-200 px-3 py-1 rounded-full text-xs md:text-sm">5,000 sqft</span>
+                        </div>
+                        <button class="mt-4 w-full bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition text-sm md:text-base">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Property 2 -->
+                <div class="rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <img src="photos/image-2.jpg" alt="Hillside Mansion" class="w-full h-48 md:h-64 object-cover">
+                    <div class="p-4 md:p-6">
+                        <h3 class="text-lg md:text-xl font-semibold mb-2">Hillside Mansion</h3>
+                        <p class="text-gray-600 font-bold text-md md:text-lg">$8,500,000</p>
+                        <div class="mt-3 flex flex-wrap gap-2">
+                            <span class="bg-gray-200 px-3 py-1 rounded-full text-xs md:text-sm">8 Bedrooms</span>
+                            <span class="bg-gray-200 px-3 py-1 rounded-full text-xs md:text-sm">10 Bathrooms</span>
+                            <span class="bg-gray-200 px-3 py-1 rounded-full text-xs md:text-sm">12,000 sqft</span>
+                        </div>
+                        <button class="mt-4 w-full bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition text-sm md:text-base">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Property 3 -->
+                <div class="rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <img src="photos/image-3.jpg" alt="City Penthouse" class="w-full h-48 md:h-64 object-cover">
+                    <div class="p-4 md:p-6">
+                        <h3 class="text-lg md:text-xl font-semibold mb-2">Downtown Penthouse</h3>
+                        <p class="text-gray-600 font-bold text-md md:text-lg">$3,800,000</p>
+                        <div class="mt-3 flex flex-wrap gap-2">
+                            <span class="bg-gray-200 px-3 py-1 rounded-full text-xs md:text-sm">3 Bedrooms</span>
+                            <span class="bg-gray-200 px-3 py-1 rounded-full text-xs md:text-sm">4 Bathrooms</span>
+                            <span class="bg-gray-200 px-3 py-1 rounded-full text-xs md:text-sm">3,200 sqft</span>
+                        </div>
+                        <button class="mt-4 w-full bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition text-sm md:text-base">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Additional Properties -->
+                <!-- Property 4 -->
+                <div class="rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <img src="photos/image-4.jpg" alt="Luxury Apartment" class="w-full h-48 md:h-64 object-cover">
+                    <div class="p-4 md:p-6">
+                        <h3 class="text-lg md:text-xl font-semibold mb-2">Skyline Apartment</h3>
+                        <p class="text-gray-600 font-bold text-md md:text-lg">$2,500,000</p>
+                        <div class="mt-3 flex flex-wrap gap-2">
+                            <span class="bg-gray-200 px-3 py-1 rounded-full text-xs md:text-sm">2 Bedrooms</span>
+                            <span class="bg-gray-200 px-3 py-1 rounded-full text-xs md:text-sm">3 Bathrooms</span>
+                            <span class="bg-gray-200 px-3 py-1 rounded-full text-xs md:text-sm">2,800 sqft</span>
+                        </div>
+                        <button class="mt-4 w-full bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition text-sm md:text-base">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Property 5 -->
+                <div class="rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <img src="photos/image-6.jpg" alt="Country Estate" class="w-full h-48 md:h-64 object-cover">
+                    <div class="p-4 md:p-6">
+                        <h3 class="text-lg md:text-xl font-semibold mb-2">Country Estate</h3>
+                        <p class="text-gray-600 font-bold text-md md:text-lg">$6,750,000</p>
+                        <div class="mt-3 flex flex-wrap gap-2">
+                            <span class="bg-gray-200 px-3 py-1 rounded-full text-xs md:text-sm">5 Bedrooms</span>
+                            <span class="bg-gray-200 px-3 py-1 rounded-full text-xs md:text-sm">6 Bathrooms</span>
+                            <span class="bg-gray-200 px-3 py-1 rounded-full text-xs md:text-sm">8,500 sqft</span>
+                        </div>
+                        <button class="mt-4 w-full bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition text-sm md:text-base">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Property 6 -->
+                <div class="rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <img src="photos/image-7.jpg" alt="Resort Villa" class="w-full h-48 md:h-64 object-cover">
+                    <div class="p-4 md:p-6">
+                        <h3 class="text-lg md:text-xl font-semibold mb-2">Resort Villa</h3>
+                        <p class="text-gray-600 font-bold text-md md:text-lg">$4,200,000</p>
+                        <div class="mt-3 flex flex-wrap gap-2">
+                            <span class="bg-gray-200 px-3 py-1 rounded-full text-xs md:text-sm">4 Bedrooms</span>
+                            <span class="bg-gray-200 px-3 py-1 rounded-full text-xs md:text-sm">5 Bathrooms</span>
+                            <span class="bg-gray-200 px-3 py-1 rounded-full text-xs md:text-sm">4,500 sqft</span>
+                        </div>
+                        <button class="mt-4 w-full bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition text-sm md:text-base">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- About Section -->
+     <section id="about" class="py-12 md:py-16 bg-white">
+        <div class="container mx-auto flex flex-col md:flex-row items-center px-4 md:px-6">
+            <div class="md:w-1/2 mb-6 md:mb-0">
+                <h2 class="text-2xl md:text-4xl font-bold mb-4">About Us</h2>
+                <p class="text-sm md:text-lg text-gray-600">We specialize in high-end real estate, offering premium properties in the most exclusive locations.</p>
+            </div>
+            <div class="md:w-1/2 mt-6 md:mt-0">
+                <img src="photos/image-3.jpg" alt="Luxury Home" class="rounded-lg shadow-lg w-full">
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-12 md:py-16 bg-gray-100">
+        <div class="container mx-auto px-4 md:px-6">
+            <h2 class="text-2xl md:text-4xl font-bold text-center mb-8">Contact Us</h2>
+            <div class="max-w-lg mx-auto">
+                <form id="whatsapp-form" class="space-y-4">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <input type="text" id="name" placeholder="Name" class="w-full px-4 py-2 rounded-lg border" required>
+                        <input type="email" id="email" placeholder="Email" class="w-full px-4 py-2 rounded-lg border" required>
+                    </div>
+                    <textarea id="message" rows="4" placeholder="Message" class="w-full px-4 py-2 rounded-lg border" required></textarea>
+                    <button type="submit" class="w-full bg-gray-900 text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition">
+                        Send Message on WhatsApp
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-6 text-center text-sm md:text-base">
+        <p>&copy; 2025 Paradise Global Properties. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!menuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+
+        // Smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+
+        document.getElementById('whatsapp-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+    
+            // Get form values
+            var name = document.getElementById('name').value.trim();
+            var email = document.getElementById('email').value.trim();
+            var message = document.getElementById('message').value.trim();
+    
+            // Check if fields are empty
+            if (name === "" || email === "" || message === "") {
+                alert("Please fill in all fields.");
+                return;
+            }
+    
+            // Your WhatsApp number (without "+")
+            var phoneNumber = "919026811374"; // Updated with your number
+    
+            // Correctly format message for WhatsApp
+            var whatsappMessage = `Hello, my name is *${name}*.\n\n📧 Email: *${email}*\n\n📝 Message:\n${message}`;
+            var encodedMessage = encodeURIComponent(whatsappMessage);
+    
+            // Open WhatsApp chat with the pre-filled message
+            var whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+            window.open(whatsappURL, '_blank');
+        });
+        
+    </script>
+</body>
+</html>
