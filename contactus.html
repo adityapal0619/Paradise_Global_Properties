@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Paradise Global Properties</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .hover-effect:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease-in-out;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+     <!-- Navbar -->
+     <nav class="bg-white shadow-md py-4">
+        <div class="container mx-auto flex justify-between items-center px-4 md:px-6">
+            <a href="index.html" class="text-xl md:text-2xl font-bold text-gray-800">Paradise Global Properties</a>
+            <button id="menu-btn" class="md:hidden">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+            <ul class="hidden md:flex space-x-6">
+                <li><a href="AboutUs.html" class="hover:text-gray-600">About</a></li>
+                <li><a href="#properties" class="hover:text-gray-600">Properties</a></li>
+                <li><a href="contactus.html" class="hover:text-gray-600">Contact</a></li>
+            </ul>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden absolute w-full bg-white shadow-lg">
+            <ul class="text-center py-4">
+                <li><a href="#about" class="block py-2 hover:bg-gray-100">About</a></li>
+                <li><a href="properties.html" class="block py-2 hover:bg-gray-100">Properties</a></li>
+                <li><a href="#contact" class="block py-2 hover:bg-gray-100">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative bg-cover bg-center h-[50vh] flex items-center justify-center text-center px-4" style="background-image: url('photos/contactus.jpg');">
+        <div class="bg-black bg-opacity-60 p-6 sm:p-10 rounded-lg text-white">
+            <h1 class="text-3xl sm:text-5xl font-bold">Contact Us</h1>
+            <p class="mt-2 sm:mt-4 text-base sm:text-lg">Get in touch with us for real estate inquiries.</p>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="py-12 sm:py-16 px-4 sm:px-8">
+        <div class="max-w-2xl mx-auto bg-white p-6 sm:p-10 rounded-lg shadow-lg">
+            <h2 class="text-2xl sm:text-3xl font-semibold text-gray-800 text-center">Get in Touch</h2>
+            <form id="contactForm" class="mt-6 sm:mt-8 space-y-4 sm:space-y-6">
+                <div class="relative">
+                    <input type="text" id="name" name="name" class="peer w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none" placeholder=" " required>
+                    <label for="name" class="absolute left-4 top-3 text-gray-500 peer-placeholder-shown:top-5 peer-placeholder-shown:text-gray-400 transition-all">Your Name</label>
+                </div>
+                <div class="relative">
+                    <input type="email" id="email" name="email" class="peer w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none" placeholder=" " required>
+                    <label for="email" class="absolute left-4 top-3 text-gray-500 peer-placeholder-shown:top-5 peer-placeholder-shown:text-gray-400 transition-all">Your Email</label>
+                </div>
+                <div class="relative">
+                    <input type="tel" id="phone" name="phone" class="peer w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none" placeholder=" " required pattern="[0-9]{10}">
+                    <label for="phone" class="absolute left-4 top-3 text-gray-500 peer-placeholder-shown:top-5 peer-placeholder-shown:text-gray-400 transition-all">Your Phone</label>
+                </div>
+                <div class="relative">
+                    <textarea id="message" name="message" rows="4" class="peer w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none" placeholder=" " required></textarea>
+                    <label for="message" class="absolute left-4 top-3 text-gray-500 peer-placeholder-shown:top-5 peer-placeholder-shown:text-gray-400 transition-all">Your Message</label>
+                </div>
+                <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition hover-effect">Send Message</button>
+            </form>
+
+            <p id="responseMessage" class="text-center text-green-600 mt-4 hidden">Message Sent Successfully!</p>
+        </div>
+    </section>
+
+    <!-- Contact Details -->
+    <section class="text-center py-10 bg-gray-50">
+        <h3 class="text-xl sm:text-2xl font-semibold text-gray-800">Contact Information</h3>
+        <p class="mt-2 text-gray-600">📞 <strong>+91 97199 22444</strong></p>
+        <p class="mt-1 text-gray-600">📧 <strong>paradiseglobalproperties@yahoo.com</strong></p>
+        <p class="mt-1 text-gray-600">📍 <strong>Agra, India</strong></p>
+    </section>
+    <footer class="bg-gray-900 text-white py-6 text-center text-sm md:text-base">
+        <p>&copy; 2025 Paradise Global Properties. All Rights Reserved.</p>
+    </footer>
+
+
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+            
+            var formData = {
+                name: document.getElementById("name").value,
+                email: document.getElementById("email").value,
+                phone: document.getElementById("phone").value,
+                message: document.getElementById("message").value
+            };
+
+            fetch("https://docs.google.com/spreadsheets/d/1n_kbHf2nHYyKEW2e4k9w54z2YygEHSxdqws3UyxofsY/edit?gid=0#gid=0", {
+                method: "POST",
+                body: JSON.stringify(formData),
+                headers: { "Content-Type": "application/json" }
+            })
+            .then(response => response.text())
+            .then(data => {
+                if (data === "Success") {
+                    document.getElementById("responseMessage").classList.remove("hidden");
+                    document.getElementById("contactForm").reset();
+                }
+            })
+            .catch(error => console.error("Error:", error));
+        });
+    </script>
+
+</body>
+</html>
