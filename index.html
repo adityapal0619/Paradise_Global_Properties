@@ -3,15 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paradise Global Properties</title>
+    <title>Paradise Globaol Properties</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Add this in your HTML file -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
 </head>
 <body class="bg-gray-100 text-gray-900">
     
     <!-- Navbar -->
     <nav class="bg-white shadow-md py-4">
         <div class="container mx-auto flex justify-between items-center px-4 md:px-6">
-            <a href="index.html" class="text-xl md:text-2xl font-bold text-gray-800">Paradise Global Properties</a>
+            <a href="index.html" class="text-xl md:text-2xl font-bold text-gray-800">Paradise Globaol Properties</a>
             <button id="menu-btn" class="md:hidden">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
@@ -19,6 +22,7 @@
             </button>
             <ul class="hidden md:flex space-x-6">
                 <li><a href="AboutUs.html" class="hover:text-gray-600">About</a></li>
+                <li><a href="Services.html" class="hover:text-gray-600">Services</a></li>
                 <li><a href="#properties" class="hover:text-gray-600">Properties</a></li>
                 <li><a href="contactus.html" class="hover:text-gray-600">Contact</a></li>
             </ul>
@@ -162,15 +166,33 @@
      <!-- About Section -->
      <section id="about" class="py-12 md:py-16 bg-white">
         <div class="container mx-auto flex flex-col md:flex-row items-center px-4 md:px-6">
-            <div class="md:w-1/2 mb-6 md:mb-0">
+            <div class="md:w-1/2 mb-6 md:mb-0" data-aos="fade-right">
                 <h2 class="text-2xl md:text-4xl font-bold mb-4">About Us</h2>
-                <p class="text-sm md:text-lg text-gray-600">We specialize in high-end real estate, offering premium properties in the most exclusive locations.</p>
+                <p class="text-sm md:text-lg text-gray-600 mb-4">
+                    At <strong>Paradise Global Properties</strong>, we specialize in curating and delivering exceptional real estate experiences across the globe. With a deep understanding of luxury and high-value investments, we cater to <strong>High-Net-Worth Individuals (HNWIs), investors, and professionals</strong> looking for premium residential, commercial, and investment properties.
+                </p>
+                <h3 class="text-xl md:text-2xl font-semibold mb-2">Our Mission</h3>
+                <p class="text-sm md:text-lg text-gray-600 mb-4">
+                    To redefine luxury real estate by providing <strong>personalized, seamless, and tech-driven solutions</strong> that empower clients to make informed, profitable property decisions.
+                </p>
+                <h3 class="text-xl md:text-2xl font-semibold mb-2">Why Choose Us?</h3>
+                <ul class="text-sm md:text-lg text-gray-600 mb-4 list-disc list-inside">
+                    <li><strong>Exclusive Global Network</strong> – Access high-value properties in India, Australia, and beyond.</li>
+                    <li><strong>Tailored Real Estate Solutions</strong> – Personalized services for buying, selling, and renting luxury properties.</li>
+                    <li><strong>Tech-Driven Transactions</strong> – Secure, efficient, and transparent real estate dealings.</li>
+                    <li><strong>Expert Guidance & Consulting</strong> – Market insights and investment strategies to maximize returns.</li>
+                </ul>
+                <h3 class="text-xl md:text-2xl font-semibold mb-2">Our Commitment</h3>
+                <p class="text-sm md:text-lg text-gray-600">
+                    At Paradise Global Properties, we ensure <strong>discretion, efficiency, and trust</strong> in every transaction. Our team provides end-to-end assistance, helping you navigate the complexities of luxury real estate with confidence.
+                </p>
             </div>
-            <div class="md:w-1/2 mt-6 md:mt-0">
-                <img src="photos/image-3.jpg" alt="Luxury Home" class="rounded-lg shadow-lg w-full">
+            <div class="md:w-1/2 mt-6 md:mt-0 cursor-pointer" data-aos="fade-left">
+                <img src="photos/image-3.jpg" alt="Luxury Home" class="rounded-lg shadow-lg w-full transition-transform transform hover:scale-105 duration-300">
             </div>
         </div>
     </section>
+    
 
     <!-- Contact Section -->
     <section id="contact" class="py-12 md:py-16 bg-gray-100">
@@ -182,6 +204,7 @@
                         <input type="text" id="name" placeholder="Name" class="w-full px-4 py-2 rounded-lg border" required>
                         <input type="email" id="email" placeholder="Email" class="w-full px-4 py-2 rounded-lg border" required>
                     </div>
+                    <input type="tel" id="Phone" placeholder="Phone Number" maxlength="10"  pattern="[0-9]{10}" class="w-full px-4 py-3 rounded-lg border" required>
                     <textarea id="message" rows="4" placeholder="Message" class="w-full px-4 py-2 rounded-lg border" required></textarea>
                     <button type="submit" class="w-full bg-gray-900 text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition">
                         Send Message on WhatsApp
@@ -191,26 +214,82 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-6 text-center text-sm md:text-base">
-        <p>&copy; 2025 Paradise Global Properties. All Rights Reserved.</p>
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Company Info -->
+                <div>
+                    <h3 class="text-xl font-bold mb-2">Paradise Globaol Properties</h3>
+                    <p class="text-gray-400 text-sm">
+                        Empowering Dreams, Crafting Legacies</p>
+                </div>
+    
+                <!-- Navigation Links -->
+                <div>
+                    <h3 class="text-xl font-bold mb-2">Explore</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="#properties" class="text-gray-400 hover:text-white transition">Properties</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition">Services</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Contact & Socials -->
+                <div>
+                    <h3 class="text-xl font-bold mb-2">Contact Us</h3>
+                    <p class="text-gray-400 text-sm">📍 Agra, Uttar Pradesh, India</p>
+                    <p class="text-gray-400 text-sm">📞 <a href="tel:+919876543210" class="hover:text-white">+91 98765 43210</a></p>
+                    <p class="text-gray-400 text-sm">✉ <a href="mailto:paradiseglobalproperties@yahoo.com" class="hover:text-white">paradiseglobalproperties@yahoo.com</a></p>
+    
+                    <!-- Social Media Icons -->
+                    <div class="flex space-x-4 mt-3">
+                        <a href="https://www.facebook.com/people/Paradise-Properties/100095192562273/?rdid=6GJSrePbWwpmWGts&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1C8cPwAQ1F%2F" target="_blank" class="text-gray-400 hover:text-white text-xl transition">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/paradise-globaol-properties/" target="_blank" class="text-gray-400 hover:text-white text-xl transition">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/105930541/admin/dashboard/ target="_blank" class="text-gray-400 hover:text-white text-xl transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://x.com/Paradiseglobaol?t=S1VRMJ8U4Md_SE5RGsQecw&s=08" target="_blank" class="text-gray-400 hover:text-white text-xl transition">
+                            <i class="fab fa-threads"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Copyright -->
+            <div class="text-center text-gray-500 text-sm mt-6">
+                © 2025 Paradise Globaol Properties. All Rights Reserved.
+            </div>
+        </div>
     </footer>
+
 
     <script>
         // Mobile menu toggle
-        const menuBtn = document.getElementById('menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuBtn = document.getElementById("menu-btn");
+            const mobileMenu = document.getElementById("mobile-menu");
+    
+            // Toggle menu on button click
+            menuBtn.addEventListener("click", (e) => {
+                e.stopPropagation(); // Prevent closing when clicking the button
+                mobileMenu.classList.toggle("hidden");
+                
+            });
+    
+            // Close menu when clicking outside
+            document.addEventListener("click", (e) => {
+                if (!menuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+                    mobileMenu.classList.add("hidden");
+                }
+            });
         });
 
-        // Close mobile menu when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!menuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
-                mobileMenu.classList.add('hidden');
-            }
-        });
+       
 
         // Smooth scroll for navigation
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -228,11 +307,12 @@
     
             // Get form values
             var name = document.getElementById('name').value.trim();
+            var phone = document.getElementById('phone').value.trim();
             var email = document.getElementById('email').value.trim();
             var message = document.getElementById('message').value.trim();
     
             // Check if fields are empty
-            if (name === "" || email === "" || message === "") {
+            if (name === "" || email === "" || message === "" || phone === "") {
                 alert("Please fill in all fields.");
                 return;
             }
@@ -248,6 +328,8 @@
             var whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
             window.open(whatsappURL, '_blank');
         });
+
+        AOS.init();
         
     </script>
 </body>
